@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  UserManagement:
+    image: user-server:latest
+    build:
+      context: ./UserManagement
+      dockerfile: Dockerfile
+    volumes:
+      - /data/user-server:latest
+    ports:
+      - "8081:8081"
+  ToDoManagement:
+    image: todo-server:latest
+    build:
+      context: ./ToDoManagement
+      dockerfile: Dockerfile
+    volumes:
+      - /data/todo-server:latest
+    ports:
+      - "8082:8082"
+  GroupManagement:
+    image: group-server:latest
+    build:
+      context: ./GroupManagement
+      dockerfile: Dockerfile
+    volumes:
+      - /data/group-server:latest
+    ports:
+      - "8083:8083"
