@@ -1,24 +1,25 @@
-# İlk Çalıştırma
+# First Run
 
-1. Sistemde Maven kurulmuş ve path'e eklenmiş olmalıdır.
-2. Sistemde JAVA v11+ kurulmuş olmalıdır.
-3. application.properties içinde spring.datasource.url isteğe göre değiştirilir.
-4. postgresql sunucusunun çalıştığı ve spring.datasource.url de belirtilen DB nin create edilmiş olduğu teyit edilir.
-5. `mvn clean spring-boot:run` komutu çalıştırılır.
+1. Maven has to be already installed on system.
+2. Java 11 has to be already installed on system.
+3. application.properties has spring.datasource.url, it can changeable.
+4. Check postgresql server runs. Database has to be created.
+5. `mvn clean spring-boot:run` command run.
 
-# Test Çalıştırma
+# Tests Run
 
-`mvn clean test` komutu çalıştırılır.
+`mvn clean test` command run.
 
-# Docker Image Oluşturma Run Etme
-`mvn clean package` ile jar dosyası export edilir.
 
-`docker build -f Dockerfile -t todo-server:latest .` docker image oluşturulur
+# Create&Run Docker Image
+`mvn clean package` exported jar file.
 
-`docker run todo-server:latest` ile image run edilir.
+`docker build -f Dockerfile -t todo-server:latest .` creating docker image
+
+`docker run todo-server:latest` running image.
 
 #Swagger
-Uygulama çalıştırıldıktan sonra `http://localhost:8082/swagger-ui/index.html#/`
+After application started `http://localhost:8082/swagger-ui/index.html#/`
 
 
-Spring boot yardımları için [tıklayınız.](HELP.md)
+Spring boot helps [click.](HELP.md)
